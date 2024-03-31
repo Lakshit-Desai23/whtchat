@@ -4,6 +4,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http.response import JsonResponse
 from rest_framework.parsers import JSONParser
 from chat.serializers import MessageSerializer
+from django.contrib.auth import logout as django_logout
 
 
 def getFriendsList(id):
@@ -182,4 +183,7 @@ def edit_profile_data(req):
 
         return redirect("/")
         
-
+# logout
+def logout(request):
+    django_logout(request)
+    return redirect('/')

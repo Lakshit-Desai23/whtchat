@@ -7,14 +7,14 @@
         <div class="container darker">
             <img src="{{message.sender_name.pic.url}}" alt="Avatar" class="right" style="width:100%;">
             <p>{{message.description}}</p>
-            <span class="time-left">{{message.time}}</span>
+            <span class="time-left"style="color:Green; font-weight:bold">{{message.time}}</span>
 
             {% if message.sender != curr_user %}
             {% if message.seen %}
-                <span class="status">Seen</span>
+                <span class="status" style="color:DodgerBlue; font-weight:bold">Seen ✓✓</span>
             
             {% else %}
-                <span class="status">Delivered ✓</span>
+                <span class="status" style="color:Tomato; font-weight:bold">Delivered ✓</span>
             {% endif %}
         {% endif %}
 
@@ -24,7 +24,7 @@
         <div class="container">
             <img src="{{message.sender_name.pic.url}}" alt="Avatar" style="width:100%;">
             <p>{{message.description}}</p>
-            <span class="time-left">{{message.time}}</span>
+            <span class="time-left"style="color:red; font-weight:bold" >{{message.time}}</span>
             
         </div>
     {% endif %}

@@ -26,10 +26,10 @@
         <div class="col"><div class="dropdown">
             <button onclick="myFunction()" class="btn btn-success">Menu</button> 
             <div id="myDropdown" class="dropdown-content">
-                <center><label style="color:green; font-size:20px; font-weight:bold">{{uid}} </label></center>
-                <a href="/search">Search</a>
-                <a href="/login">Logout</a>
-                <a href="{% url 'edit_profile' pk=uid.id %}">Edit Profile</a>
+                <center><label style="color:green; font-size:20px; font-weight:bold">💕{{uid}}💕 </label></center>
+                <a href="/search" style="color:DodgerBlue; font-weight:bold">🔍Search</a>
+                <a href="{% url 'logout' %}" style="color:DodgerBlue; font-weight:bold">🔓Logout</a>
+                <a href="{% url 'edit_profile' pk=uid.id %}" style="color:DodgerBlue; font-weight:bold">✒️Edit Profile</a>
               </div>
         </div>
         </div>
@@ -42,10 +42,10 @@
                         <li class="list-group-item list-group-item-action">
                             <div class="row">
                                 <div class="col">
-                                    <img src="{{friend.pic.url}}" style="width: 50px; height: 50px;">
+                                    <img src="{{friend.pic.url}} " style="width: 80px; height: 80px;">
                                 </div>
                                 <div class="col">
-                                    <div class="row" style="font-color: #000"><p>{{friend.name}}</p></div>
+                                    <div class="row" style="color:DodgerBlue; font-weight:bold"><p>{{friend.name}}</p></div>
                                 </div>
                             </div>
                         </li>

@@ -15,6 +15,8 @@ urlpatterns = [
     path("edit_profile/<int:pk>/",views.edit_profile,name="edit_profile"),
     path("edit_profile_data/",views.edit_profile_data, name="edit_profile_data"),
 
+    # logout
+    path("logout/",views.logout,name="logout"),
 ] 
 # if settings.DEBUG:
 #     urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
